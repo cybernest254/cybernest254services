@@ -1,76 +1,80 @@
-/* General body styling */
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-} 
+}
 
-/* Styling for the navigation menu */
+/* Navigation Bar */
 nav {
-    display: flex; /* Flexbox layout to align logo and menu items */
-    justify-content: space-between; /* Space between logo and menu items */
-    align-items: center; /* Vertically center content */
-    background-color: #4CAF50; /* Green background for the nav */
-    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: green;
+    padding: 15px 5%;
+    height: 70px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* Styling for the logo */
-nav .logo {
-    flex: 0 0 auto; /* Prevent logo from stretching */
-}
-
-nav .logo img {
-    width: 200px; /* Adjust logo size */
+.logo img {
+    width: 120px; /* Adjust logo size */
     height: auto;
 }
 
-/* Style the unordered list (ul) */
+/* Navigation Menu */
 nav ul {
-    list-style-type: none; /* Remove default list styling */
+    list-style: none;
+    display: flex;
     margin: 0;
     padding: 0;
-    display: flex; /* Display list items horizontally */
 }
 
-/* Style each list item (li) */
 nav ul li {
-    margin-right: 20px; /* Space between the list items */
+    margin: 0 20px;
 }
 
-/* Style the anchor tags inside the list items */
 nav ul li a {
-    color: white; /* White text color for links */
-    text-decoration: none; /* Remove underline */
-    font-size: 16px; /* Adjust font size */
-    padding: 10px 20px; /* Add some padding to make the links look like buttons */
-    display: inline-block; /* Make the link a block-level element */
-    border-radius: 5px; /* Rounded corners for the link */
-
+    text-decoration: none;
+    color: brown;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-/* Add a hover effect to the links */
 nav ul li a:hover {
-    background-color: #8B4513; /* Brown background on hover */
+    color: #f4a261; /* Highlight color */
+    border-radius: 5px;
 }
 
-/* Add spacing after the last link */
-nav ul li:last-child {
-    margin-right: 0; /* Remove margin on the last item */
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
 }
-/* Home Section Styles */
-/* Home Section Styles */
-/* General Styling for the Home Section */
-/* General reset for padding and margin */
 @keyframes backgroundSlideshow {
-    0% { background-image: url('background.jpg'); }
-    20% { background-image: url('background 1.jpg'); }
-    40% { background-image: url('background 2.jpg'); }
-    60% { background-image: url('background 3.jpg'); }
-    80% { background-image: url('tech image.jpg'); }
-    100% { background-image: url('background.jpg'); }
+    0% { background-image: url('GENERATED\ 1.jpg'); }
+    33% { background-image: url('GENERATED\ 2.jpg'); }
+    66% { background-image: url('GENERATED\ 3.jpg'); }
 }
-
 .home {
     width: 100%;
     height: 100vh;
@@ -79,7 +83,7 @@ nav ul li:last-child {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    color:brown;
     font-family: Arial, sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
@@ -163,7 +167,7 @@ button:hover {
 
 body {
     background-color: #f0f4f8;
-    color: #333;
+    color:brown;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -190,78 +194,107 @@ section {
     background-color: #f9f9f9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+.services {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
+}
 
-/* Service card header */
-.service-card h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
+h2 {
+    font-size: 2em;
     color: #333;
-}
-
-/* Service card paragraph */
-.service-card p {
-    font-size: 16px;
     margin-bottom: 20px;
-    color: #555;
 }
 
-/* Button styles */
-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+/* Service Cards */
+.service-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
 }
 
-button:hover {
-    background-color: #0056b3;
+.service-card:hover {
+    transform: translateY(-5px);
 }
 
-button:active {
-    transform: scale(0.95);
+h3 {
+    color: #007bff;
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
 
-/* More services section */
-.more-services {
-    margin-top: 20px;
+h4 {
+    color: #444;
+    font-size: 1.2em;
+    margin-top: 15px;
 }
 
-/* List styles */
-.more-services ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-/* List item styles */
-.more-services li {
-    margin-bottom: 15px;
-}
-
-/* List item paragraph */
-.more-services li p {
-    font-size: 14px;
+p {
     color: #666;
+    line-height: 1.6;
+    font-size: 1em;
 }
 
-/* Image styles */
-.more-services img {
-    max-width: 100px;
+/* Image Styling */
+.service-card img {
+    max-width: 100%;
     height: auto;
     display: block;
     margin-top: 10px;
+    border-radius: 5px;
 }
 
-/* Media query for smaller screens */
-@media (max-width: 600px) {
-    button {
-        padding: 10px 20px;
-        font-size: 14px;
+/* List Styling */
+.service-card li {
+    color: #333;
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.service-card li img {
+    max-width: 100px;
+    height: auto;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-card {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+    h4 {
+        font-size: 1.1em;
+    }
+
+    p {
+        font-size: 0.95em;
+    }
+
+    .service-card li img {
+        max-width: 80px;
     }
 }
+
+
+
 #Join\ our\ Community {
     text-align: center;
     background:#555;
